@@ -32,4 +32,5 @@ EXPOSE 8080
 
 #启动容器时，执行脚本文件启动Tomcat并持续输出日志，防止容器退出。
 #CMD /home/apache-tomcat-8.0.47/bin/startup.sh
-ENTRYPOINT /home/apache-tomcat-8.0.47/bin/startup.sh && tail -f /home/apache-tomcat-8.0.47/logs/catalina.out
+#/home/apache-tomcat-8.0.47/bin/startup.sh &&
+ENTRYPOINT  java -jar /home/apache-tomcat-8.0.47/webapps/demo-0.0.1-SNAPSHOT.jar && tail -f /home/apache-tomcat-8.0.47/logs/catalina.out
