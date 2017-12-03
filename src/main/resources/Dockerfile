@@ -25,7 +25,7 @@ ENV PATH $PATH:$JAVA_HOME/bin
 #安装tomcat，同JDK
 ADD apache-tomcat-8.0.47.tar.gz /home/
 #RUN rm -rf /home/apache-tomcat-8.0.47/webapps/*
-ADD target/demo-0.0.1-SNAPSHOT.jar /home/apache-tomcat-8.0.47/webapps/
+#ADD target/demo-0.0.1-SNAPSHOT.jar /home/apache-tomcat-8.0.47/webapps/
 
 #暴露tomcat的内部端口，如果没有修改tomcat的配置文件的话，默认是8080端口
 EXPOSE 8080
